@@ -1,7 +1,6 @@
 import React from 'react';
-import Product from '../components/Product';
+import Products from '../components/Products';
 import { ProductConsumer } from '../context/context';
-
 
 export default function FeaturedProduct() {
 	return (
@@ -14,7 +13,7 @@ export default function FeaturedProduct() {
 							const { featuredProducts } = value;
 
 							return featuredProducts.map((product) => {
-								return <Product key={product.id} product={product} />;
+								return <Products key={product.id} product={product} />;
 							});
 						}}
 					</ProductConsumer>
