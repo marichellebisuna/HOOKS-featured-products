@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import defaultImg from '../img/product-0.png';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaCartPlus } from 'react-icons/fa';
 import { ProductConsumer } from '../context/context';
@@ -14,7 +15,7 @@ export default function Product({ product }) {
 						<div className="card">
 							<div className="image-container">
 								<img
-									src={product.image}
+									src={product.image || defaultImg}
 									alt="product"
 									className="card-img-top p-5"
 									style={{ height: '320px' }}

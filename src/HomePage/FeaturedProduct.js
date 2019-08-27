@@ -1,7 +1,7 @@
 import React from 'react';
 import Product from '../components/Product';
 import { ProductConsumer } from '../context/context';
-//import { Link } from 'react-router-dom';
+
 
 export default function FeaturedProduct() {
 	return (
@@ -19,13 +19,6 @@ export default function FeaturedProduct() {
 						}}
 					</ProductConsumer>
 				</div>
-				{/* <div className="row mt-5">
-					<div className="col text-center">
-						<Link to="/products" className="main-link">
-							our products
-						</Link>
-					</div>
-				</div> */}
 			</div>
 		</section>
 	);

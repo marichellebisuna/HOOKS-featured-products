@@ -5,20 +5,10 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
 	state = {
-		cartItems: 0,
-		cartSubTotal: 0,
-		cartTax: 0,
-		cartTotal: 0,
-		storeProducts: [],
-		filteredProducts: [],
-		featuredProducts: [],
-		singleProduct: {},
-		loading: false
+		featuredProducts: []
 	};
 
 	componentDidMount() {
-		//from contentful items
-
 		this.setProducts(items);
 	}
 
@@ -38,33 +28,14 @@ class ProductProvider extends Component {
 		let featuredProducts = storeProducts.filter((item) => item.featured === true);
 
 		this.setState({
-			storeProducts,
-			filteredProducts: storeProducts,
-			featuredProducts,
-			cart: this.getStorageCart(),
-			singleProduct: this.getStorageProduct(),
-			loading: false
+			featuredProducts
 		});
 	};
-	//get cart from local storage
-	getStorageCart = () => {
-		return [];
-	};
-	//get product from local storage
-	getStorageProduct = () => {
-		return {};
-	};
-	//get totals
-	getTotals = () => {};
-	//add totals
-	addTotals = () => {};
-	//sunc storage
-	syncStorage = () => {};
-	//add to cart
+
 	addToCart = (id) => {
 		console.log(`add to cart ${id}`);
 	};
-	//set single product
+
 	setSingleProduct = (id) => {
 		console.log(`set single product ${id}`);
 	};
